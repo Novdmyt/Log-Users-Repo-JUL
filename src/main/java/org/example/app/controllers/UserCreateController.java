@@ -3,13 +3,13 @@ package org.example.app.controllers;
 import org.example.app.services.UserCreateService;
 import org.example.app.utils.AppStarter;
 import org.example.app.utils.Constants;
-import org.example.app.views.UserCreate;
+import org.example.app.views.UserCreateView;
 
 public class UserCreateController {
-    UserCreate view;
+    UserCreateView view;
    UserCreateService service;
 
-    public UserCreateController(UserCreateService service, UserCreate view) {
+    public UserCreateController(UserCreateService service, UserCreateView view) {
         this.service = service;
         this.view = view;
     }
