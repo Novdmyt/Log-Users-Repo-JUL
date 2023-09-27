@@ -22,7 +22,7 @@ public class UserReadController {
             view.getOutput(str);
             System.exit(0);
         } else {
-            view.getOutput("\n______ CONTACTS ___________\n" + str);
+            view.getOutput("\n______ Users ___________\n" + str);
             AppStarter.startApp();
         }
     }
