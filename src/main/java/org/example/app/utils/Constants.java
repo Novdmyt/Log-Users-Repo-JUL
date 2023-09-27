@@ -22,7 +22,7 @@ public class Constants {
     public final static String EMAIL_RGX = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
     public final static String WRONG_EMAIL_MSG = "Wrong email input.";
     // Regex для name
-    public final static String NAME_RGX = "^[a-zA-Z0-9_ -]+$";
+    public final static String NAME_RGX = "[a-zA-Z]";
 
     // Regexes для id
     public final static String ID_RGX = "[0-9]";
