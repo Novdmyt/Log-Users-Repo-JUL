@@ -2,7 +2,7 @@ package org.example.app.views;
 
 import java.util.Scanner;
 
-public class UserCreate {
+public class UserCreateView {
     public String[] getData(){
         Scanner scanner = new Scanner(System.in);
 
