@@ -35,6 +35,7 @@ public class AppView {
                 """);
     }
 
+
     public void getOutput(int choice, String output) {
         if (choice == 0) System.out.println(output);
         scanner.close();
