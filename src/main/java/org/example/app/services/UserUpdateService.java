@@ -5,10 +5,7 @@ import org.example.app.entities.User;
 import org.example.app.exeptions.DBException;
 import org.example.app.exeptions.UpdateException;
 import org.example.app.repositories.UserUpdateRepository;
-import org.example.app.utils.Constants;
-import org.example.app.utils.IdChecker;
-import org.example.app.utils.IdValidator;
-import org.example.app.utils.PhoneValidator;
+import org.example.app.utils.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -76,7 +73,7 @@ public class UserUpdateService {
         return errors;
     }
 
-    // Преобразовываем массив данных в объект.
+
     private User mapData(String[] data) {
 
         User user = new User();
