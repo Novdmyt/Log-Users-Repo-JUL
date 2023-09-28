@@ -1,20 +1,11 @@
 package org.example.app.services;
 
-import org.example.app.controllers.UserCreateController;
-import org.example.app.controllers.UserDeleteController;
-import org.example.app.controllers.UserReadController;
-import org.example.app.controllers.UserUpdateController;
+import org.example.app.controllers.*;
 import org.example.app.exeptions.OptionException;
-import org.example.app.repositories.UserCreateRepository;
-import org.example.app.repositories.UserDeleteRepository;
-import org.example.app.repositories.UserReadRepository;
-import org.example.app.repositories.UserUpdateRepository;
+import org.example.app.repositories.*;
 import org.example.app.utils.AppStarter;
 import org.example.app.utils.Constants;
-import org.example.app.views.UserCreateView;
-import org.example.app.views.UserDeleteView;
-import org.example.app.views.UserReadView;
-import org.example.app.views.UserUpdateView;
+import org.example.app.views.*;
 
 public class AppService {
     public void createUser() {
@@ -40,6 +31,13 @@ public class AppService {
         UserUpdateController controller = new UserUpdateController(service, view);
         controller.updateUser();
     }
+    public void updateUserEmail(){
+        UserUpdateEmailRepository repository = new UserUpdateEmailRepository();
+        UserUpdateEmailService service = new UserUpdateEmailService(repository);
+        UserUpdateEmailView emailView = new UserUpdateEmailView();
+        UserUpdateEmailController controller = new UserUpdateEmailController(service, emailView);
+        controller.updateUserEmail();
+    }
 
     public void deleteUser() {
         UserDeleteRepository repository = new UserDeleteRepository();
@@ -50,7 +48,7 @@ public class AppService {
     }
 
     public void getNoSuchOption(int choice) {
-        int[] menuChoices = {0, 1, 2, 3, 4};
+        int[] menuChoices = {0, 1, 2, 3, 4, 5};
         if (!contains(menuChoices, choice)) {
             try {
                 throw new OptionException(Constants.INCORRECT_VALUE_MSG);
